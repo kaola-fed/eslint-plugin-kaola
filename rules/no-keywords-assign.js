@@ -1,5 +1,5 @@
 /**
- * @fileoverview Rule to disallow incorrect semicolons
+ * @fileoverview Rule to disallow custom keywords
  * @author Aeo
  */
 
