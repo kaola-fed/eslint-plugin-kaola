@@ -12,7 +12,7 @@ const Constant = require('../constant');
 //------------------------------------------------------------------------------
 
 module.exports = function(context) {
-    let KEYWORDS = Constant.KEYWORDS.concat(context.options || []);
+    let KEYWORDS = Constant.KEYWORDS.concat(context.options && context.options[0] || []);
     /**
      * Check if the node name is present inside the KEYWORDS list
      * @param {ASTNode} id id to evaluate

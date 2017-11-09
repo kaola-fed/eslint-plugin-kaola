@@ -29,7 +29,7 @@ Then configure the rules you want to use under the rules section.
 ```json
 {
     "rules": {
-        "kaola/no-keywords-assign": ["error", ...customKeywords]
+        "kaola/no-keywords-assign": ["error"(, [...customKeywords])]
     }
 }
 ```
