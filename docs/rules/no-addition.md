@@ -1,4 +1,4 @@
-# Rule to disallow addition or addition assignment (no-addition)
+# Rule to disallow potential float addition or addition assignment(no-addition)
 
 Disallow addition or addition assignment to avoid float addition
 

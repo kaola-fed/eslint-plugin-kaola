@@ -16,7 +16,34 @@ ruleTester.run("no-addition", rule, {
 
     valid: [
         {
-            code: "a-b"
+            code: "a + 1"
+        },
+        {
+            code: "a + '1'"
+        },
+        {
+            code: "1 + 2"
+        },
+        {
+            code: "1 + '1'"
+        },
+        {
+            code: "1.2 + '1'"
+        },
+        {
+            code: "a + 1 + '1'"
+        },
+        {
+            code: "a + '1' + b"
+        },
+        {
+            code: "'1.2' + '1'"
+        },
+        {
+            code: "a += 1"
+        },
+        {
+            code: "a += '1'"
         },
         {
             code: "a++"
@@ -37,6 +64,20 @@ ruleTester.run("no-addition", rule, {
         },
         {
             code: "a + b",
+            errors: [{
+                message: warning,
+                type: "BinaryExpression"
+            }]
+        },
+        {
+            code: "a + b + c",
+            errors: [{
+                message: warning,
+                type: "BinaryExpression"
+            }]
+        },
+        {
+            code: "a + b + 1 + c",
             errors: [{
                 message: warning,
                 type: "BinaryExpression"
