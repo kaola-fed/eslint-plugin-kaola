@@ -4,8 +4,7 @@
 
 'use strict';
 
-module.exports = {
-    rules: {
-        'no-keywords-assign': require('./rules/no-keywords-assign')
-    }
-};
+var requireIndex = require("requireindex");
+
+// import all rules in /rules
+module.exports.rules = requireIndex(__dirname + "/rules");
